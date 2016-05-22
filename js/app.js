@@ -108,7 +108,7 @@ app.controller('Main', function ($scope) {
             solar_wo_loan_Bills = solar_wo_loan_Bills + reducedBill;
             currentYear++;
         }
-
+         
         createChart(solar_graph, parseInt($('#chart').width()));
 
 
@@ -131,7 +131,7 @@ function createChart(data, wi) {
 
 
 
-    var x = d3.time.scale()
+    var x = d3.scale.linear()
             .range([0, width]);
 
     var y = d3.scale.linear()
@@ -141,7 +141,7 @@ function createChart(data, wi) {
 
     var xAxis = d3.svg.axis()
             .scale(x)
-            .orient("bottom");
+            .orient("bottom").tickFormat(d3.format("d"));
 
     var yAxis = d3.svg.axis()
             .scale(y)
@@ -192,6 +192,8 @@ function createChart(data, wi) {
     x.domain(d3.extent(data, function (d) {
         return d.year;
     }));
+    
+    
 
 
     y.domain([
