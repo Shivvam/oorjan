@@ -13,6 +13,9 @@ body{
     padding: 2%;
 }
 
+.link{
+     cursor: pointer; cursor: hand; 
+}
 
 .font_in{
     color:#337ab7;    

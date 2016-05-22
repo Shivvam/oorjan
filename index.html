@@ -35,7 +35,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand oorjan_logo" href="#">
+                    <a class="navbar-brand oorjan_logo link" href="#intro">
                         <img src="https://www.oorjan.com/static/core/img/Logo-COL.90f0aaeec991.png" style="max-height: 100%;"/>
                     </a>
                 </div>
@@ -44,7 +44,7 @@
                     <ul class="nav navbar-nav navbar-right">
 
                         <li class="">
-                            <a href="#"> Home</a>
+                            <a  class="link" href="#intro"> Home</a>
                         </li>
                         <li class="">
                             <a href="https://www.oorjan.com/blog/">Blog</a>
@@ -87,7 +87,7 @@
                                 </a>
                             </span>
                             <h3>
-                                <a style="text-decoration: none;outline: none;" href="#homes">Solar Loans for Homes</a>
+                                <a style="text-decoration: none;outline: none;" class="link" href="#homes">Solar Loans for Homes</a>
                             </h3>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                                 </a>
                             </span>
                             <h3>
-                                <a style="text-decoration: none;outline: none;" href="#housing">Solar Loans for Housing Societies</a>
+                                <a class="link" style="text-decoration: none;outline: none;" href="#housing">Solar Loans for Housing Societies</a>
                             </h3>
                         </div>
                     </div>
@@ -108,12 +108,12 @@
                         <div>
                             <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <a href="#commercial">
+                                <a href="#commercial" class="link">
                                     <i class="fa fa-industry fa-stack-1x  font_in"></i>
                                 </a>
                             </span>
                             <h3>
-                                <a style="text-decoration: none;outline: none;" href="#commercial">Solar Loans for Businesses</a>
+                                <a class="link" style="text-decoration: none;outline: none;" href="#commercial">Solar Loans for Businesses</a>
                             </h3>
                         </div>
                     </div>
@@ -121,41 +121,45 @@
                         <div>
                             <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <a href="#ppa">
+                                <a href="#ppa" class="link">
                                     <i class="fa fa-inr fa-stack-1x font_in"></i>
                                 </a>
                             </span>
                             <h3>
-                                <a style="text-decoration: none;outline: none;" href="#ppa">Pay-per-Unit Financing</a>
+                                <a class="link" style="text-decoration: none;outline: none;" href="#ppa">Pay-per-Unit Financing</a>
                             </h3>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-12 col-xs-12">
+                    <div class="col-xs-12 col-md-2" >
                         <div>
                             <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <a href="#installer">
+                                <a href="#installer" class="link">
                                     <i class="fa fa-wrench fa-stack-1x font_in"></i>
                                 </a>
                             </span>
                             <h3>
-                                <a href="#installer" style="text-decoration: none;outline: none;">Installer Partner Signup</a>
+                                <a href="#installer" class="link" style="text-decoration: none;outline: none;">Installer Partner Signup</a>
                             </h3>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-12 col-xs-12">
-                        <div>
+                    <div class="col-xs-12 col-md-2">
+                        <div >
                             <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <a href="#scalculator">
-                                    <i class="fa fa-calculator fa-stack-1x font_in" aria-hidden="true"></i>
+                                <a href="#scalculator" class="link">
+                                    <i class="fa fa-calculator fa-stack-1x font_in" ></i>
                                 </a>
                             </span>
                             <h3>
-                                <a href="#scalculator" style="text-decoration: none;outline: none;">Solar Calculator</a>
+                                <a href="#scalculator" class="link" style="text-decoration: none;outline: none;">Solar Calculator</a>
                             </h3>
                         </div>
                     </div>
+
+
+
+
 
                 </div>
             </div>
@@ -990,6 +994,25 @@
                             $('.bluebg').hover(function () {
                                 $(this).find('.p_details').slideDown();
                             });
+
+
+                            $(function () {
+                                $('.link').click(function () {
+                                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                                        var target = $(this.hash);
+                                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                                        if (target.length) {
+                                            $('html,body').animate({
+                                                scrollTop: target.offset().top
+                                            }, 1000);
+                                            return false;
+                                        }
+                                    }
+                                });
+                            });
+
+
         </script>
     </body>
 </html>
