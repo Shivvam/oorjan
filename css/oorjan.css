@@ -2,15 +2,20 @@
 @media only screen and (min-device-width:786px){
     .head1{
         font-size: 62px;
-     color: d3d3d3;   
+        color: d3d3d3;   
     }
 }
 body{
     font-family: 'Droid Sans', sans-serif;
 }
 
+.oorjan_logo{
+    padding: 2%;
+}
+
+
 .font_in{
-color:#337ab7;    
+    color:#337ab7;    
 }
 .axis path,
 .axis line {
